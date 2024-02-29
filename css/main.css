@@ -17,6 +17,7 @@ header {
     background-color: #ffffff;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
+    padding: 10px;
 }
 
 h1, h2, h3, h4, h5, h6, p {
@@ -25,6 +26,10 @@ h1, h2, h3, h4, h5, h6, p {
 
 h1 {
     font-size: 36px;
+}
+
+#page-title {
+    display: inline;
 }
 
 h3 {
@@ -54,16 +59,27 @@ nav li {
     border: 2px solid #004fcc;
     background-color: #4287f5;
     list-style-type: none;
+    float: left;
+    width: 15%;
+    padding: 16px;
 }
 
 nav li a {
     color: #ffffff;
     text-align: center;
     text-decoration: none;
+    font-family: 'Segoe UI', sans-serif;
+    font-weight: 500;
 }
 
 nav li:hover {
     background-color: #000000;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
 }
 
 .active {
@@ -90,4 +106,26 @@ table tr:hover {
 table th {
     background-color: #4287f5;
     color: #ffffff;
+}
+
+form {
+    font-family: 'Segoe UI', sans-serif;
+}
+
+#logo {
+    height: 50px;
+    width: 50px;
+    float: left;
+    margin-right: 10px;
+}
+
+#left-col {
+    width: 50%;
+    float: left;
+    padding: 10px;
+    margin-right: 10%;
+}
+
+#right-col {
+    padding: 30px 100px 30px 30px;
 }
