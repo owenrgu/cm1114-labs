@@ -78,6 +78,14 @@ main {
     color: rgb(112, 189, 234);
 }
 
+.code-editor-purple {
+    color: rgb(145, 71, 201);
+}
+
+.code-editor-yellow {
+    color: rgb(202, 241, 93);
+}
+
 aside {
     background-color: #000000;
     border-radius: 10px;
@@ -214,4 +222,20 @@ input {
 .image-caption {
     color: #ffffff;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.gallery-img {
+    width: 100%;
+}
+
+#img-gallery {
+    padding-top: 10px;
+}
+
+#img-gallery .row {
+    margin-bottom: 10px;
+}
+
+.col-sm {
+    text-align: center; /* will also center the image in the column, perfect for members page! */
 }
