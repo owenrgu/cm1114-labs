@@ -1,14 +1,23 @@
 <html>
     <head>
+        <!-- Bootstrap -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+        
+        <!-- CSS -->
         <link rel="stylesheet" href="css/main.css">
+
+        <!-- Page title -->
         <title>Contact Us - Coding Society</title>
     </head>
     <body>
+        <!-- Header of the page (containing logo and title) -->
         <header>
             <img id="logo" src="images/logo.png">
             <h1 id="page-title">Coding Society</h1>
         </header>
 
+        <!-- Navigation bar -->
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -19,43 +28,48 @@
             </ul>
         </nav>
 
-        <main>
+        <!-- First subheading on the page -->
+        <div>
+            <h3>Contact Us</h3>
+        </div>
+
+        <main class="grey-background">
+            <!-- Left column (for the contact form) -->
             <div id="left-col">
+                <!-- Description message -->
                 <div>
-                    <h3>Contact Us</h3>
-                    <p>
-                        Use the form below to get in touch, or follow us on social media.
-                    </p>
+                    <p>Use the <span class="code-editor-pink"><b>form below</b></span> to get in touch, or <span class="code-editor-blue"><b>follow us</b></span> on social media.</p>
                 </div> 
 
+                <!-- Contact form -->
                 <div>
                     <form>
                         <fieldset>
                             <!--<legend>Get in touch using the form below, or follow us on social media</legend>-->
 
-                            <label for="name">Name:</label>
+                            <label class="form-label" for="name"><b>Name:</b></label>
                             <input type="text" name="name" value="">
-                            <br />
+                            <br /><br />
 
-                            <label for="email">Email:</label>
+                            <label class="form-label" for="email"><b>Email:</b></label>
                             <input type="text" name="email" value="">
-                            <br />
+                            <br /><br />
 
-                            <label for="membership-status">Membership Status:</label>
+                            <label class="form-label" for="membership-status"><b>Membership Status:</b></label>
                             <input type="radio" name="membership-status-member" value="Member">
                             <label for="membership-status-member">Member</label>
                             <input type="radio" name="membership-status-nonmember" value="Non-Member">
                             <label for="membership-status-nonmember">Non-Member</label>
-                            <br />
+                            <br /><br />
 
-                            <label for="name">Comments:</label>
+                            <label class="form-label" for="name"><b>Comments:</b></label>
                             <input type="text" name="comments" value="">
                             <!--or: <textarea name="comments" cols="45" rows="5"></textarea>-->
-                            <br />
+                            <br /><br />
 
-                            <label for="file">Attach a file:</label>
+                            <label class="form-label" for="file"><b>Attach a file:</b></label>
                             <input type="file" name="file" value="">
-                            <br />
+                            <br /><br />
 
                             <!--<input type="submit" value="Submit">-->
                             <input type="button" value="Submit">
@@ -64,11 +78,15 @@
                 </div>
             </div>
 
-            <div id="right-col">
-                <a class="twitter-timeline" data-height="800" data-theme="light" href="https://twitter.com/RobertGordonUni?ref_src=twsrc%5Etfw">Tweets by RobertGordonUni</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            <!-- Right column (for the Twitter feed) -->
+            <!-- should always be 600px height to avoid annoying tweet loading bug -->
+            <div id="right-col" style="height: 600px;">
+                <a class="twitter-timeline" data-height="550" data-theme="dark" href="https://twitter.com/RobertGordonUni?ref_src=twsrc%5Etfw">Tweets by RobertGordonUni</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
             </div>
-        
-            <footer>
+        </main>
+
+        <!-- Footer -->
+        <footer>
             <p>Copyright Owen Meade</p>
         </footer>
     </body>

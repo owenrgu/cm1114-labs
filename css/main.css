@@ -1,31 +1,41 @@
 /*
-main text color #000000 (black)
-secondary text color #ffffff (white)
-background color #808080 (grey)
-accent and interactive feature color #004fcc (dark blue)
-main color #4287f5 (blue)
+code editor lime color - rgb(143, 225, 67)
+code editor pink color - rgb(244, 127, 230)
+code editor red color - rgb(234, 112, 112)
+code editor blue color - rgb(112, 189, 234)
 
-largest header text size 36px
-normal text size 12px
+main text color - #ffffff (white)
+secondary text color - code editor lime color
+background color - #000000 (black)
+accent and interactive feature color - #4a4a4a (lighter grey)
+main color - #1c1c1c (dark grey)
+
+h1 text size - 36px
+normal text size - 12px
 */
 
 body {
-    background-color: #808080;
+    background-color: #000000;
 }
 
 header {
-    background-color: #ffffff;
+    background-color: #1c1c1c;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     padding: 10px;
+    margin: 10px 10px;
 }
 
 h1, h2, h3, h4, h5, h6, p {
-    font-family: 'Segoe UI', sans-serif;
+    font-family: 'Courier New', Courier, monospace;
+    margin: 10px 10px;
+    color: #ffffff;
 }
 
 h1 {
     font-size: 36px;
+    font-weight: 600;
+    color: rgb(143, 225, 67);
 }
 
 #page-title {
@@ -34,6 +44,7 @@ h1 {
 
 h3 {
     font-size: 28px;
+    font-weight: 600;
 }
 
 p {
@@ -41,39 +52,67 @@ p {
 }
 
 main {
-    background-color: #ffffff;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    margin: 0px 10px 10px 10px;
+}
+
+.grey-background {
+    background-color: #1c1c1c;
     border-radius: 10px;
+}
+
+.code-editor-lime {
+    color: rgb(143, 225, 67);
+}
+
+.code-editor-pink {
+    color: rgb(244, 127, 230);
+}
+
+.code-editor-red {
+    color: rgb(234, 112, 112);
+}
+
+.code-editor-blue {
+    color: rgb(112, 189, 234);
 }
 
 aside {
-    background-color: #ffffff;
+    background-color: #000000;
     border-radius: 10px;
+    margin: 10px 10px 0px 10px;
+}
+
+nav {
+    margin: 10px 10px;
 }
 
 footer {
-    background-color: #4287f5;
+    background-color: #1c1c1c;
     border-radius: 10px;
+    margin: 10px 10px 0px 10px;
 }
 
 nav li {
-    border: 2px solid #004fcc;
-    background-color: #4287f5;
+    border: 2px solid #000000;
+    background-color: #1c1c1c;
     list-style-type: none;
     float: left;
     width: 15%;
-    padding: 16px;
+    padding: 10px;
 }
 
 nav li a {
     color: #ffffff;
     text-align: center;
     text-decoration: none;
-    font-family: 'Segoe UI', sans-serif;
+    font-family: 'Courier New', Courier, monospace;
     font-weight: 500;
 }
 
 nav li:hover {
-    background-color: #000000;
+    background-color: #4a4a4a;
 }
 
 nav ul {
@@ -83,33 +122,53 @@ nav ul {
 }
 
 .active {
-    background-color: #004fcc;
+    background-color: #4a4a4a;
 }
 
 table {
-    font-family:'Segoe UI', sans-serif;
+    font-family: 'Courier New', Courier, monospace;
     border-collapse: collapse;
 }
 
 table td, table th {
-    border: 2px solid #f0f0f0;
-}
-
-table tr:nth-child(even) {
-    background-color: #f2f2f2;
-}
-
-table tr:hover {
-    background-color: #808080;
-}
-
-table th {
-    background-color: #4287f5;
+    border: 2px solid #000000;
     color: #ffffff;
 }
 
+table tr {
+    background-color: #1c1c1c;
+}
+
+table tr:nth-child(even) {
+    background-color: #333333;
+}
+
+table tr:hover {
+    background-color: #000000;
+}
+
+table th {
+    background-color: #0d0d0d;
+    color: rgb(143, 225, 67);
+    text-align: center;
+}
+
 form {
-    font-family: 'Segoe UI', sans-serif;
+    font-family: 'Courier New', Courier, monospace;
+    color: #ffffff;
+    margin-left: 10px;
+    border: 2px solid rgb(143, 225, 67);
+    padding: 10px;
+}
+
+input {
+    background: #333333;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.form-label {
+    color: rgb(143, 225, 67);
 }
 
 #logo {
@@ -128,4 +187,31 @@ form {
 
 #right-col {
     padding: 30px 100px 30px 30px;
+}
+
+.carousel {
+    margin: 10px 10px;
+}
+
+.carousel-item {
+    height: 400px;
+    width: 100%;
+    background-color: #ffffff;
+}
+
+.carousel-item > img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+}
+
+.carousel-indicators {
+    color: #ffffff;
+    list-style: none;
+}
+
+.image-caption {
+    color: #ffffff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
