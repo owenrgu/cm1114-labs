@@ -14,18 +14,7 @@ h1 text size - 36px
 normal text size - 12px
 */
 
-body {
-    background-color: #000000;
-}
-
-header {
-    background-color: #1c1c1c;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    padding: 10px;
-    margin: 10px 10px;
-}
-
+/* Text elements */
 h1, h2, h3, h4, h5, h6, p {
     font-family: 'Courier New', Courier, monospace;
     margin: 10px 10px;
@@ -51,17 +40,44 @@ p {
     font-size: 18px;
 }
 
+/* Main page elements */
+body {
+    background-color: #000000;
+}
+
+header {
+    background-color: #1c1c1c;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    padding: 10px;
+    margin: 10px 10px;
+}
+
 main {
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
     margin: 0px 10px 10px 10px;
 }
 
+footer {
+    background-color: #1c1c1c;
+    border-radius: 10px;
+    margin: 10px 10px 0px 10px;
+}
+
+aside {
+    background-color: #000000;
+    border-radius: 10px;
+    margin: 10px 10px 0px 10px;
+}
+
+/* Give elements with these classes specific styling */
 .grey-background {
     background-color: #1c1c1c;
     border-radius: 10px;
 }
 
+/* code editor colors, used in span tags for changing text color */
 .code-editor-lime {
     color: rgb(143, 225, 67);
 }
@@ -86,20 +102,9 @@ main {
     color: rgb(202, 241, 93);
 }
 
-aside {
-    background-color: #000000;
-    border-radius: 10px;
-    margin: 10px 10px 0px 10px;
-}
-
+/* Navigation bar */
 nav {
     margin: 10px 10px;
-}
-
-footer {
-    background-color: #1c1c1c;
-    border-radius: 10px;
-    margin: 10px 10px 0px 10px;
 }
 
 nav li {
@@ -133,6 +138,14 @@ nav ul {
     background-color: #4a4a4a;
 }
 
+#logo {
+    height: 50px;
+    width: 50px;
+    float: left;
+    margin-right: 10px;
+}
+
+/* Events calendar */
 table {
     font-family: 'Courier New', Courier, monospace;
     border-collapse: collapse;
@@ -161,6 +174,7 @@ table th {
     text-align: center;
 }
 
+/* Contact form */
 #contact-form {
     font-family: 'Courier New', Courier, monospace;
     color: #ffffff;
@@ -179,13 +193,7 @@ input {
     color: rgb(143, 225, 67);
 }
 
-#logo {
-    height: 50px;
-    width: 50px;
-    float: left;
-    margin-right: 10px;
-}
-
+/* Contact-us page where the page is split into two columns */
 #left-col {
     width: 50%;
     float: left;
@@ -197,6 +205,7 @@ input {
     padding: 30px 100px 30px 30px;
 }
 
+/* Image carousel on home page */
 .carousel {
     margin: 10px 10px;
 }
@@ -214,11 +223,13 @@ input {
     min-width: 100%;
 }
 
+/* Get rid of the numbers on the carousel indicator */
 .carousel-indicators {
     color: #ffffff;
     list-style: none;
 }
 
+/* Make the buttons the same size as the carousel rather than the entire page */
 .carousel-control-prev, .carousel-control-next {
     height: auto;
     top: 50%;
@@ -229,6 +240,7 @@ input {
     height: 400px;
 }
 
+/* Allow captions on carousel images */
 .image-caption {
     color: #ffffff;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -250,6 +262,7 @@ input {
     text-align: center; /* will also center the image in the column, perfect for members page! */
 }
 
+/* Login form on home page, so we can align it on the right */
 #login-form {
     font-family: 'Courier New', Courier, monospace;
     color: #ffffff;
