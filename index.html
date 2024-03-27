@@ -15,6 +15,12 @@
         <header>
             <img id="logo" src="images/logo.png">
             <h1 id="page-title">Coding Society</h1>
+
+            <form id="login-form">
+                <input type="text" name="email" placeholder="email" value="">
+                <input type="password" name="password" placeholder="password" value="">
+                <button id="login-button" type="button" onclick="login()">Login</button>
+            </form>
         </header>
 
         <!-- Navigation bar -->
@@ -51,7 +57,7 @@
                             <div class="carousel-caption">
                                 <h1>Hackathon Excitement</h1>
                                 <p class="image-caption">Experience the thrill of coding under pressure at our annual hackathons. Bring your ideas to life and win prizes!</p>
-                                <a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a>
+                                <a class="btn btn-lg btn-primary" href="event_calendar.html" role="button">Learn more</a>
                             </div>
                         </div>
                     </div>
@@ -72,7 +78,7 @@
                             <div class="carousel-caption">
                                 <h1>Career Development</h1>
                                 <p class="image-caption">Unlock new career opportunities with our career development initiatives. From resume workshops to networking events, we've got you covered.</p>
-                                <a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a>
+                                <a class="btn btn-lg btn-primary" href="careers.html" role="button">Learn more</a>
                             </div>
                         </div>
                     </div>
@@ -102,5 +108,22 @@
         <footer>
             <p>Copyright Owen Meade</p>
         </footer>
+
+        <!-- Handle logins -->
+        <script>
+            var counter = 2;
+            var loginButton = document.getElementById("login-button");
+            
+            function login() {
+                if (counter%2 === 0) {
+                    alert("You have been logged in!");
+                    loginButton.innerHTML = "Logout";
+                } else {
+                    alert("You have been logged out!");
+                    loginButton.innerHTML = "Login";
+                }
+                counter++;
+            }
+        </script>
     </body>
 </html>

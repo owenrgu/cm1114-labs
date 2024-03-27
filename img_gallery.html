@@ -92,8 +92,45 @@
 
         <aside></aside>
 
+        <!-- Footer -->
         <footer>
             <p>Copyright Owen Meade</p>
         </footer>
+
+        <script>
+            // variables
+            let images = document.getElementsByClassName("gallery-img");
+            
+            // functions
+            function highlight(target) {
+                removeAllHighlights();
+                target.style.border = "solid rgb(143, 225, 67) 3px";
+                target.style.filter = "brightness(100%)"; // brighten the image now that it has been hovered over
+            }
+
+            function removeHighlight(target) {
+                target.style.border = "none";
+            }
+
+            function removeAllHighlights() {
+                for (let i = 0; i < images.length; i++) {
+                    let img = images.item(i);
+                    img.style.border = "none";
+                }
+            }
+
+            function darken(target) {
+                target.style.filter = "brightness(15%)";
+            }
+
+            // main
+            // bind events for all images
+            for (let i = 0; i < images.length; i++) {
+                let img = images.item(i);
+                img.addEventListener("mouseover", function(info){ highlight(info.target); });
+                img.addEventListener("mouseout", function(info){ removeHighlight(info.target); });
+                darken(img);
+            }
+        </script>
     </body>
 </html>

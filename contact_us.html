@@ -43,7 +43,7 @@
 
                 <!-- Contact form -->
                 <div>
-                    <form>
+                    <form id="contact-form">
                         <fieldset>
                             <!--<legend>Get in touch using the form below, or follow us on social media</legend>-->
 
@@ -71,10 +71,15 @@
                             <input type="file" name="file" value="">
                             <br /><br />
 
-                            <!--<input type="submit" value="Submit">-->
-                            <input type="button" value="Submit">
+                            <button type="button" onclick='send_form("form_outcome", "Form has been sent successfully!")'>Submit</button>
                         </fieldset>
                     </form>
+                </div>
+
+                <!-- Form outcome section (beneath our form) -->
+                <!-- text will be modified when the Submit button is clicked -->
+                <div>
+                    <p id="form_outcome"></p>
                 </div>
             </div>
 
@@ -89,5 +94,13 @@
         <footer>
             <p>Copyright Owen Meade</p>
         </footer>
+
+        <!-- Sending form (called on submit button click) -->
+        <script>
+            // send form
+            function send_form(id, completedText) {
+                document.getElementById(id).innerHTML = completedText
+            }
+        </script>
     </body>
 </html>

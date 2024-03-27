@@ -161,7 +161,7 @@ table th {
     text-align: center;
 }
 
-form {
+#contact-form {
     font-family: 'Courier New', Courier, monospace;
     color: #ffffff;
     margin-left: 10px;
@@ -219,6 +219,16 @@ input {
     list-style: none;
 }
 
+.carousel-control-prev, .carousel-control-next {
+    height: auto;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    height: 400px;
+}
+
 .image-caption {
     color: #ffffff;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -238,4 +248,10 @@ input {
 
 .col-sm {
     text-align: center; /* will also center the image in the column, perfect for members page! */
+}
+
+#login-form {
+    font-family: 'Courier New', Courier, monospace;
+    color: #ffffff;
+    float: right;
 }
