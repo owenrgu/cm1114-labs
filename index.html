@@ -1,3 +1,12 @@
+<!--
+    THREAT MODEL
+    Threat Source: External
+    Threat Agent: Human or Computer
+    Threat Motivation: Malicious - identity theft, data theft
+    Threat Intent: Intentional - gain unauthorised access to user accounts
+    Threat Impact: Elevation of privilege to an unauthorised user, disclosure of potentially sensitive information
+    Threat Mitigation: Enforce strong password requirements; 2FA logins; encrypt passwords
+-->
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -23,7 +32,7 @@
             <h1 id="page-title">Coding Society</h1>
 
             <!-- Login form -->
-            <form id="login-form">
+            <form name="login-form" id="login-form">
                 <input type="text" name="email" placeholder="email" value="">
                 <input type="password" name="password" placeholder="password" value="">
                 <button id="login-button" type="button" onclick="login()">Login</button>
@@ -60,7 +69,7 @@
                 <div class="carousel-inner">
                     <!-- Image 1 -->
                     <div class="carousel-item active">
-                        <img class="d-block w-100" alt="gallery image" src="images/gallery/image2.jpg">
+                        <img class="d-block w-100" alt="javascript code" src="images/gallery/image2.jpg">
                         <div class="container">
                             <div class="carousel-caption">
                                 <h1>Hackathon Excitement</h1>
@@ -72,7 +81,7 @@
 
                     <!-- Image 2 -->
                     <div class="carousel-item">
-                        <img class="d-block w-100" alt="gallery image" src="images/gallery/image1.jpg">
+                        <img class="d-block w-100" alt="css code" src="images/gallery/image1.jpg">
                         <div class="container">
                             <div class="carousel-caption">
                                 <h1>Tech Talks & Webinars</h1>
@@ -83,7 +92,7 @@
 
                     <!-- Image 3 -->
                     <div class="carousel-item">
-                        <img class="d-block w-100" alt="gallery image" src="images/gallery/image11.jpg">
+                        <img class="d-block w-100" alt="blue wireframe graphic" src="images/gallery/image11.jpg">
                         <div class="container">
                             <div class="carousel-caption">
                                 <h1>Career Development</h1>
@@ -104,35 +113,36 @@
             </a>
 
             <!-- Text holder -->
-            <div id="text-container">
+            <section id="home-text-container">
                 <!-- Welcome message -->
-                <div id="welcome-description" class="grey-background">
+                <div id="home-welcome-description" class="grey-background">
                     <h3>About Us</h3>
                     <p>Welcome to the <span class="code-editor-lime"><b>Coding Society</b></span> - a hub for coding enthusiasts to <span class="code-editor-pink"><b>collaborate</b></span>, <span class="code-editor-blue"><b>learn</b></span> and <span class="code-editor-red"><b>innovate</b></span>. Whether you're a novice or an experienced coder, join us as we explore the <span class="code-editor-lime"><b>limitless possibilities</b></span> of programming together.</p>
+                    <p>With a diverse range of <span class="code-editor-pink"><b>weekly events</b></span> and <span class="code-editor-blue"><b>development opportunities</b></span>, there's something here for everyone to grow and thrive in the world of technology. Join us on this exciting journey!</p>
                 </div>
 
                 <!-- News articles holder -->
                 <aside id="news-articles" class="grey-background">
-                    <h3>Welcome to the Coding Society!</h3>
+                    <h3>Latest News</h3>
                     <div class="news-article-container">
                         <div class="news-article">
-                            <img src="images/members/owen.png" alt="person">
-                            <h4 class="code-editor-blue"><b>An interesting article title</b></h4>
-                            <p>Some random gsirnhirusnhosridnhrios nhrsinhiosren ihonsr</p>
+                            <img src="images/news/zuck.jpg" alt="Mark Zuckerberg (Meta CEO) giving a talk to students">
+                            <h4 class="code-editor-blue"><b>Tech Talk Series: Industry Insights Unveiled</b></h4>
+                            <p>Delve into cutting-edge topics with our exclusive Tech Talk series, revealing key insights and strategies from tech leaders, empowering members to thrive.</p>
                         </div>
                         <div class="news-article">
-                            <img src="images/members/owen.png" alt="person">
-                            <h4 class="code-editor-blue"><b>An interesting article title</b></h4>
-                            <p>Some random gsirnhirusnhosridnhrios nhrsinhiosren ihonsr</p>
+                            <img src="images/news/hackathon.jpg" alt="three people gathered round laptop">
+                            <h4 class="code-editor-blue"><b>Successful Hackathon Ignites Innovation</b></h4>
+                            <p>Our recent hackathon brought together global coders, sparking inventive projects and collaboration, showcasing the Coding Society's vibrant creativity.</p>
                         </div>
                     </div>
                 </aside>
-            </div>
+            </section>
         </main>
 
-        <!-- Footer -->
+        <!-- Footer (copyright notice) -->
         <footer>
-            <p>Copyright Owen Meade</p>
+            <p>Copyright © 2024 Owen Meade</p>
         </footer>
 
         <!-- Script to handle login feature -->
@@ -143,14 +153,25 @@
             
             // functions
             function login() {
+                // get title and date input fields
+                var emailInput = document.forms["login-form"]["email"].value; 
+                var passwordInput = document.forms["login-form"]["password"].value; 
+
                 if (counter%2 === 0) {
-                    alert("You have been logged in!");
-                    loginButton.innerHTML = "Logout"; // update button text
+                    if (emailInput == "") { // make sure user entered an email
+                        alert("You must enter an email to log in!");
+                    } else if (passwordInput == "") { // make sure user entered a password
+                        alert("You must enter a password to log in!");
+                    } else { // email and password was entered; log in!
+                        alert("You have been logged in!");
+                        loginButton.innerHTML = "Logout"; // update button text
+                        counter++;
+                    }
                 } else {
                     alert("You have been logged out!");
                     loginButton.innerHTML = "Login"; // update button text
+                    counter++;
                 }
-                counter++;
             }
         </script>
     </body>

@@ -1,3 +1,13 @@
+<!--
+    THREAT MODEL
+    Threat Source: External
+    Threat Agent: Computers
+    Threat Motivation: Malicious - prevent people from accessing the society website
+    Threat Intent: Intentional - spam the event request form to overwhelm server with traffic
+    Threat Impact: Denial of Service (website downtime)
+    Threat Mitigation: Enforce rate limits on form to prevent excessive requests;
+                       Use bot detection systems like CAPTCHA to prevent spam submissions from bots
+-->
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -42,10 +52,10 @@
 
             <!-- Table that will be our calendar -->
             <div>
-                <table>
+                <table class="events-calendar">
                     <!-- Table Header -->
                     <tr>
-                        <td></td> <th>Monday</th> <th>Tuesday</th> <th>Wednesday</th> <th>Thursday</th> <th>Friday</th> <th>Saturday</th> <th>Sunday</th>
+                        <th></th> <th>Monday</th> <th>Tuesday</th> <th>Wednesday</th> <th>Thursday</th> <th>Friday</th> <th>Saturday</th> <th>Sunday</th>
                     </tr>
                     <!-- Week 1 -->
                     <tr>
@@ -97,13 +107,46 @@
                     </tr>
                 </table>
             </div>
+
+            <!-- Recommendation form -->
+            <div class="grey-background">
+                <p style="padding-top: 10px;"><b>Want to recommend an event? Tell us below!</b></p>
+
+                <form id="event-request-form" name="events">
+                    <label for="event_title">Event Title:</label>
+                    <input type="text" id="event_title" name="event_title" placeholder="Enter a title...">
+                
+                    <label for="event_date">Date:</label>
+                    <input type="date" id="event_date" name="event_date">
+
+                    <!-- button bound to the submit_event() function -->
+                    <button type="button" onclick="submit_event()">Submit Event</button>
+                </form>
+            </div>
         </main>
 
-        <aside></aside>
-
-        <!-- Footer -->
+        <!-- Footer (copyright notice) -->
         <footer>
-            <p>Copyright Owen Meade</p>
+            <p>Copyright © 2024 Owen Meade</p>
         </footer>
+
+        <!-- Script for submiting form -->
+        <script>
+            function submit_event() { 
+                // get title and date input fields
+                var title = document.forms["events"]["event_title"].value; 
+                var date = document.forms["events"]["event_date"].value; 
+
+                if (title == "") { // make sure a title exists
+                    alert("An event must have a title!"); 
+                }
+                else if (date.length == 0) { // make sure a date exists
+                    alert("An event must have a date!"); 
+                } else {
+                    // if a title and a date exist, submit the form
+                    alert("Event submitted! The society will contact you soon!"); 
+                }
+            }
+        </script>
     </body>
 </html>

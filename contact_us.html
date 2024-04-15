@@ -1,3 +1,12 @@
+<!--
+    THREAT MODEL
+    Threat Source: External
+    Threat Agent: Human
+    Threat Motivation: Malicious - infect the website backend
+    Threat Intent: Intentional - upload malicious files to the contact form
+    Threat Impact: Information corruption, elevation of privilege which could result in access to sensitive information
+    Threat Mitigation: Only allow certain file types to be uploaded (.jpg, .png, etc)
+-->
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -41,7 +50,7 @@
 
         <main class="grey-background">
             <!-- Left column (for the contact form) -->
-            <div id="left-col">
+            <div id="contact-left-col">
                 <!-- Description message -->
                 <div>
                     <p>Use the <span class="code-editor-pink"><b>form below</b></span> to get in touch, or <span class="code-editor-blue"><b>follow us</b></span> on social media.</p>
@@ -91,14 +100,14 @@
 
             <!-- Right column (for the Twitter feed) -->
             <!-- should always be 600px height to avoid annoying tweet loading bug -->
-            <div id="right-col" style="height: 600px;">
+            <aside id="contact-right-col" style="height: 600px;">
                 <a class="twitter-timeline" data-height="550" data-theme="dark" href="https://twitter.com/RobertGordonUni?ref_src=twsrc%5Etfw">Tweets by RobertGordonUni</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-            </div>
+            </aside>
         </main>
 
-        <!-- Footer -->
+        <!-- Footer (copyright notice) -->
         <footer>
-            <p>Copyright Owen Meade</p>
+            <p>Copyright © 2024 Owen Meade</p>
         </footer>
 
         <!-- Script to handle sending form (called on submit button click) -->

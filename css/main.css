@@ -14,38 +14,47 @@ h1 text size - 36px
 normal text size - 12px
 */
 
-/* Text elements */
+/* == TEXT ELEMENTS == */
+/* set font and color on text elements */
 h1, h2, h3, h4, h5, h6, p {
     font-family: 'Courier New', Courier, monospace;
     margin: 10px 10px;
     color: #ffffff;
 }
 
+/* make headings big and green */
 h1 {
     font-size: 36px;
     font-weight: 600;
     color: rgb(143, 225, 67);
 }
 
+/* make the page title appear next to the logo instead of underneath */
 #page-title {
     display: inline;
 }
 
+/* format subheadings */
 h3 {
     font-size: 28px;
     font-weight: 600;
     padding: 10px 0px 0px 0px;
 }
 
+/* set default paragraph text size */
 p {
     font-size: 18px;
 }
 
-/* Main page elements */
+
+
+/* == MAIN PAGE ELEMENTS == */
+/* make page color all black */
 body {
     background-color: #000000;
 }
 
+/* set border radius on main elements */
 header {
     background-color: #1c1c1c;
     border-top-left-radius: 10px;
@@ -64,15 +73,20 @@ footer {
     background-color: #1c1c1c;
     border-radius: 10px;
     margin: 10px 10px 0px 10px;
+    text-align: center;
 }
 
-aside {
+/*aside {
     background-color: #000000;
     border-radius: 10px;
     margin: 10px 10px 0px 10px;
-}
+}*/
 
+
+
+/* == SPECIFIC STYLING == */
 /* Give elements with these classes specific styling */
+/* elements with a grey background */
 .grey-background {
     background-color: #1c1c1c;
     border-radius: 10px;
@@ -103,11 +117,14 @@ aside {
     color: rgb(202, 241, 93);
 }
 
-/* Navigation bar */
+
+
+/* == NAVIGATION BAR == */
 nav {
     margin: 10px 10px;
 }
 
+/* make list items in the navigation bar appear horizontally */
 nav li {
     border: 2px solid #000000;
     background-color: #1c1c1c;
@@ -117,6 +134,7 @@ nav li {
     padding: 10px;
 }
 
+/* format text in nav bar links differently to other text */
 nav li a {
     color: #ffffff;
     text-align: center;
@@ -125,6 +143,7 @@ nav li a {
     font-weight: 500;
 }
 
+/* highlight navigation bar item when hovered over */
 nav li:hover {
     background-color: #4a4a4a;
 }
@@ -135,10 +154,12 @@ nav ul {
     overflow: hidden;
 }
 
+/* highlight currently active navbar button */
 .active {
     background-color: #4a4a4a;
 }
 
+/* position logo appropriately */
 #logo {
     height: 50px;
     width: 50px;
@@ -146,36 +167,60 @@ nav ul {
     margin-right: 10px;
 }
 
-/* Events calendar */
-table {
+
+
+/* == EVENTS CALENDAR == */
+.events-calendar {
     font-family: 'Courier New', Courier, monospace;
+    font-size: 10pt;
     border-collapse: collapse;
+    width: 100%;
 }
 
-table td, table th {
+.events-calendar td, .events-calendar th {
     border: 2px solid #000000;
     color: #ffffff;
+    padding: 10px;
 }
 
-table tr {
+/* enforce a certain width on all columns */
+.events-calendar td {
+    width: 14%;
+}
+
+.events-calendar tr {
     background-color: #1c1c1c;
 }
 
-table tr:nth-child(even) {
+/* alternate row colors */
+.events-calendar tr:nth-child(even) {
     background-color: #333333;
 }
 
-table tr:hover {
+/* highlight row when it is hovered over */
+.events-calendar tr:hover {
     background-color: #000000;
 }
 
-table th {
+/* format text in the headings */
+.events-calendar th {
     background-color: #0d0d0d;
     color: rgb(143, 225, 67);
     text-align: center;
 }
 
-/* Contact form */
+
+
+/* == EVENT REQUEST FORM == */
+#event-request-form {
+    font-family: 'Courier New', Courier, monospace;
+    color: #ffffff;
+    padding: 10px;
+}
+
+
+
+/* == CONTACT FORM == */
 #contact-form {
     font-family: 'Courier New', Courier, monospace;
     color: #ffffff;
@@ -184,6 +229,7 @@ table th {
     padding: 10px;
 }
 
+/* set different (more readable) font on input fields */
 input {
     background: #333333;
     color: white;
@@ -194,19 +240,22 @@ input {
     color: rgb(143, 225, 67);
 }
 
-/* Contact-us page where the page is split into two columns */
-#left-col {
+/* split the contact-us page into two columns */
+#contact-left-col {
     width: 50%;
     float: left;
     padding: 10px;
     margin-right: 10%;
 }
 
-#right-col {
+#contact-right-col {
     padding: 30px 100px 30px 30px;
 }
 
-/* Image carousel on home page */
+
+
+/* == BOOTSTRAP IMAGE CAROUSEL (HOME PAGE) == */
+/* re-enforce margins */
 .carousel {
     margin: 10px 10px;
 }
@@ -224,13 +273,13 @@ input {
     min-width: 100%;
 }
 
-/* Get rid of the numbers on the carousel indicator */
+/* get rid of the numbers on the carousel indicator */
 .carousel-indicators {
     color: #ffffff;
     list-style: none;
 }
 
-/* Make the buttons the same size as the carousel rather than the entire page */
+/* make the buttons the same size as the carousel rather than the entire page */
 .carousel-control-prev, .carousel-control-next {
     height: auto;
     top: 50%;
@@ -241,14 +290,18 @@ input {
     height: 400px;
 }
 
-/* Allow captions on carousel images */
+/* format captions on carousel images */
 .image-caption {
     color: #ffffff;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+
+
+/* == GALLERY IMAGES == */
 .gallery-img {
     width: 100%;
+    transition: 400ms; /* allows a fade-in effect when style is changed in javascript */
 }
 
 #img-gallery {
@@ -263,36 +316,56 @@ input {
     text-align: center; /* will also center the image in the column, perfect for members page! */
 }
 
-/* Login form on home page, so we can align it on the right */
+
+
+/* == LOGIN FORM (HOME PAGE) == */
+/* align form on the right */
 #login-form {
     font-family: 'Courier New', Courier, monospace;
     color: #ffffff;
     float: right;
 }
 
-/* News articles on home page */
-#welcome-description {
+
+
+/* == NEWS ARTICLES (HOME PAGE) */
+/* container then a left and right column */
+#home-text-container {
+    display: flex;
+}
+
+#home-welcome-description {
     width: 50%;
     float: left;
     padding: 10px;
-    margin-right: 10%;
+    margin-right: 10px;
 }
 
+#news-articles {
+    padding: 10px;
+    width: 50%;
+}
+
+/* container for all of the news articles (in a grid) */
 .news-article-container {
     display: grid;
-    gap: 5px;
+    gap: 10px;
 }
 
+/* style for individual news articles */
 .news-article {
-    height: 100px;
+    height: 210px;
     border: 1px dashed rgb(112, 189, 234);
     border-radius: 10px;
 }
 
+/* make sure images are the right width and appear on the left of the article */
 .news-article img {
     float: left;
     padding: 0px 10px;
     height: 100%;
+    max-width: 210px;
+    object-fit: scale-down;
 }
 
 .news-article h4 {
