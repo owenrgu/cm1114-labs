@@ -374,6 +374,8 @@ input {
 
 
 
+/* == QUIZ PAGE == */
+/* left column of the quiz page, containing the quiz questions */
 #quiz-holder {
     width: 70%;
     float: left;
@@ -381,20 +383,24 @@ input {
     margin-right: 10px;
 }
 
+/* make individual questions stand out more */
 .question {
     padding: 0px 10px 10px 10px;
     background: #141414;
     border-radius: 10px;
 }
 
+/* make question font stand out more and more readable */
 .question p {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+/* format question title color */
 .question h3 {
     color: rgb(145, 71, 201)
 }
 
+/* indent the question options and set their font */
 .question-options {
     padding-left: 10px;
     font-family: 'Courier New', Courier, monospace;
