@@ -371,3 +371,32 @@ input {
 .news-article h4 {
     padding-top: 10px;
 }
+
+
+
+#quiz-holder {
+    width: 70%;
+    float: left;
+    padding: 10px;
+    margin-right: 10px;
+}
+
+.question {
+    padding: 0px 10px 10px 10px;
+    background: #141414;
+    border-radius: 10px;
+}
+
+.question p {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.question h3 {
+    color: rgb(145, 71, 201)
+}
+
+.question-options {
+    padding-left: 10px;
+    font-family: 'Courier New', Courier, monospace;
+    color: #ffffff;
+}
