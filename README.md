@@ -11,7 +11,7 @@ Generative AI was used in this site to generate placeholder information for the 
 - Quiz questions on the quiz page
 - Descriptions of each programming language on the languages page
 
-All HTML/CSS/JavaScript code was written by hand with the knowledge gained in the labs or with references which have been listed below. No code was written by Generative AI. 
+All HTML/CSS/JavaScript code was written by hand with the knowledge gained in the labs or with references which have been listed below and at the point which they are used in the code. No code was written by Generative AI. 
 
 # References
 - For creating a grid of cards on the Languages page: https://getbootstrap.com/docs/4.0/components/card/#using-grid-markup
